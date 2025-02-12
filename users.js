@@ -13,5 +13,18 @@ $(document).ready(function(){
         });
             
         }
+
+    $("#delete").click(function () {
+        if (users.length > 0){
+            users.pop();
+        localStorage.setItem("users",JSON.stringify(users));
+        }
+        else {
+            alert("No registered users to delete")
+        }
+    })
+
     }
+
+
 );
