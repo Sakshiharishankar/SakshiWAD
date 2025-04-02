@@ -1,35 +1,74 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script defer src ="script.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" >
-</script>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>jQuery Mobile: Theme Download</title>
+	<link rel="stylesheet" href="themes/sakshi.min.css" />
+	<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 </head>
+
+<style>
+	
+</style>
 <body>
-  
- <center>
-    <h1>User Registration Form </h1>
-    <form id="registration_form" >
+	<div data-role="page" id="page1" data-theme="a">
+		<div data-role="header">
+			<p><center>This is My First Page</center></p>
+		</div>
+		<div data-role="navbar">
+			<link href="#page1">
+			<link href="page2">
+		</div>
 
+		<div data-role="content">
+			<h3>Registration Form</h3>
+			<form>
+				<center>
+				<label for="">Enter your name </label>
+				<input type="text"><br><br>
+				<label for="">Enter email address </label>
+				<input type="text"><br><br>
+				<label for="">Enter password</label>
+				<input type="text"><br><br>
 
-        <label for ="name">Enter  Name: </label> <br>
-         <input type="text" id="name" name="name"><br>
-         <label for ="email">Enter email:</label><br>
-         <input type="text" id="email" name="email"><br>
-         <label for ="mobile">Enter mobileNo:<label><br>
-         <input type="text" id="mobile" name="mobile"><br><br>
+				<button type="submit"><a href="#page2">Register</a></button>
+				</center>
+			</form>
+		</div>
 
-          
-<button type ="Submit" id ="submit">Register</button><br>
-</form>
-<br>
-<a href ="users.html">View Registered users</a>
- </center>
+		<div data-role="footer" id="xyz">
+			All rights reserved
+		</div>
 
-      
-  
+	</div>
+	<div data-role="page" id="page2" data-theme="a">
+		<div data-role="header">
+			<p><center>This is My second Page</center></p>
+		</div>
+		
+
+		<div data-role="content">
+			<h3>Login Form</h3>
+			<form>
+				<center>
+				
+				<label for="">Enter email address </label>
+				<input type="text"><br><br>
+				<label for="">Enter password</label>
+				<input type="text"><br><br>
+					<p><a href="#page1">Unregisterd ?? Register here !</a></p>
+				<button type="submit"><a href="#page1">Login</a></button>
+				
+				</center>
+			</form>
+		</div>
+
+		<div data-role="footer" id="xyz">
+			All rights reserved
+		</div>
+	</div>
 </body>
 </html>
