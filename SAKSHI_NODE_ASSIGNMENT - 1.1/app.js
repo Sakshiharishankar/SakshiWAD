@@ -1,5 +1,5 @@
 // C9VGXVJWjsJMi1Pr
-//mongodb+srv://sonupandey17001:C9VGXVJWjsJMi1Pr@cluster0.yxni570.mongodb.net/Cars
+//mongodb+srv://sonupandey17001:<password>@cluster0.yxni570.mongodb.net/Cars
 
 const express = require('express')
 const mongoose = require ('mongoose')
@@ -10,7 +10,7 @@ const PORT = 3000;
 
 app.use(bodyParser.json());
 
-mongoose.connect('mongodb+srv://sonupandey17001:C9VGXVJWjsJMi1Pr@cluster0.yxni570.mongodb.net/Cars')
+mongoose.connect('mongodb+srv://sonupandey17001:<password>@cluster0.yxni570.mongodb.net/Cars')
 
 console.log("Database Connected")
 
