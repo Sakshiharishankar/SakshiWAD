@@ -1,6 +1,3 @@
-// C9VGXVJWjsJMi1Pr
-//mongodb+srv://sonupandey17001:<password>@cluster0.yxni570.mongodb.net/Cars
-
 const express = require('express')
 const mongoose = require ('mongoose')
 const bodyParser = require('body-parser')
@@ -37,19 +34,21 @@ app.post('/add-vehicle',async(req,res)=>{
     const newColl = new Vehicle({name,price,color});
 
     await newColl.save();
+    res.send("Added")
 })
 
 app.delete('/delete-vehicle/:name',async(req,res)=>{
     const{name} = req.params
 
     const vehicle = await Vehicle.findOneAndDelete({name});
+    res.send("Deleted")
 })
 
 app.put('/update-vehicle',async(req,res)=>{
     
     const{name,color} = req.body
-    const vehicle = await Vehicle.findOneAndUpdate({name,color});
-
+    const vehicle = await Vehicle.findOneAndUpdate({name},{$set:{color}},{new : true});
+    res.send("Updated")
     
 })
 
